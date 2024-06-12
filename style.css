@@ -1045,9 +1045,7 @@ footer {
 
 .animated-image {
   max-width: 100%;
-    /* 圖片最大寬度為頁面寬度的100% */
-    height: auto;
-    /* 高度自動調整以保持比例 */
+  height: auto;
   opacity: 0;
   animation: fadeInAndShake 2s ease-in-out forwards;
 }
