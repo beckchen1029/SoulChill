@@ -312,19 +312,10 @@ a {
   opacity: 100%;
   background-image: url("https://github.com/beckchen1029/SoulChill/blob/main/%E6%A9%AB%E5%B9%85.jpg?raw=true");
   background-size: cover;
-
-  /* 背景图片居中显示 */
   background-position: center;
-
-  /* 防止背景图像重复 */
   background-repeat: no-repeat;
-
-  /* 设置容器的宽度和高度 */
-  width: 100%;
-  height: 500px;
-  /* 根据需要调整高度 */
-
-  /* 使内容相对于容器定位 */
+  max-width: 100%;
+  height: 300px;
   position: relative;
 }
 
