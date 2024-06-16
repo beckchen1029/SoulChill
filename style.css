@@ -303,7 +303,7 @@ a {
 }
 
 .fourthSec {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   max-width: 100%;
   padding: 0px;
@@ -315,16 +315,14 @@ a {
 }
 
 .fourthSec_img-container {
-  display: flex;
-  position: relative;
-  width: 100%;
-  margin-right: 0px;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 .fourthSec_img-container img {
-  max-width: 50%;
-  max-height: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -557,6 +555,7 @@ a {
 
 .eighthSec_content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
   padding: 0px 0px 20px 0px;
@@ -595,7 +594,6 @@ a {
 }
 
 .eighthSec_promo-image {
-  margin: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
