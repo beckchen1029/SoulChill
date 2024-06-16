@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nodeSelectors = [".header__logo", ".items", ".sidebar__logo"];
+  const nodeSelectors = [".header_logo", ".header_nav_list_items",];
   const nodes = [];
 
   nodeSelectors.forEach((selector) => {
@@ -34,28 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 ScrollReveal().reveal(".headline");
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".animated-image");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  function animateImages() {
-    images.forEach((image) => {
-      observer.observe(image);
-    });
-  }
-
-  animateImages();
-});
