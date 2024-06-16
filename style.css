@@ -438,7 +438,7 @@ a {
 .sixthSec {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   /* 確保子項目靠左對齊 */
   align-items: center;
   max-width: 100%;
@@ -450,11 +450,12 @@ a {
 .sixthSec_text-container {
   display: flex;
   flex-direction: column;
+
 }
 
 .fifth-sec_img-container,
 .sixthSec_img-container {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   text-align: center;
 }
