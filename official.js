@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nodeSelectors = [".header_logo", ".header_nav_list_items",];
+  const nodeSelectors = [".navbar-brand"];
   const nodes = [];
 
   nodeSelectors.forEach((selector) => {
@@ -34,4 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 ScrollReveal().reveal(".headline");
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var navbarToggler = document.querySelector('.navbar-toggler');
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+
+  navbarToggler.addEventListener('click', function () {
+    if (navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    } else {
+      navbarCollapse.classList.add('show');
+    }
+  });
+});
