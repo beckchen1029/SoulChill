@@ -34,21 +34,56 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 ScrollReveal().reveal(".headline");
 
+document.addEventListener("DOMContentLoaded", function () {
+  // 品牌名稱動畫效果代碼保持不變
 
+  // 導航欄功能
+  var navLinks = document.querySelectorAll(
+    ".nav-link, .navbar-brand, .header_nav_btn"
+  );
+  var navbarToggler = document.querySelector(".navbar-toggler");
+  var navbarCollapse = document.querySelector(".navbar-collapse");
 
-document.addEventListener('DOMContentLoaded', function () {
-  var navbarToggler = document.querySelector('.navbar-toggler');
-  var navbarCollapse = document.querySelector('.navbar-collapse');
-
-  navbarToggler.addEventListener('click', function () {
-    if (navbarCollapse.classList.contains('show')) {
-      navbarCollapse.classList.remove('show');
+  function toggleNavbar() {
+    if (
+      navbarCollapse.style.display === "none" ||
+      navbarCollapse.style.display === ""
+    ) {
+      navbarCollapse.style.display = "block";
     } else {
-      navbarCollapse.classList.add('show');
+      navbarCollapse.style.display = "none";
+    }
+  }
+
+  navbarToggler.addEventListener("click", toggleNavbar);
+
+  navLinks.forEach(function (navLink) {
+    navLink.addEventListener("click", function () {
+      if (window.innerWidth < 992) {
+        navbarCollapse.style.display = "none";
+      }
+    });
+  });
+
+  // 點擊外部區域關閉菜單
+  document.addEventListener("click", function (event) {
+    var isClickInside =
+      navbarCollapse.contains(event.target) ||
+      navbarToggler.contains(event.target);
+    if (!isClickInside && navbarCollapse.style.display === "block") {
+      navbarCollapse.style.display = "none";
+    }
+  });
+
+  // 窗口大小改變時處理導航欄
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 992) {
+      navbarCollapse.style.display = "";
     }
   });
 });
+
+// ScrollReveal 效果
+ScrollReveal().reveal(".headline");
