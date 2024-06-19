@@ -7,7 +7,6 @@ body {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   width: 100%;
-  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -18,7 +17,6 @@ body {
 }
 
 a {
-  padding: 15px;
   color: inherit;
   /* 最下公司法律常見問題的顏色 */
 }
@@ -617,7 +615,6 @@ footer {
 .footer_section a:hover {
   border-radius: 100px;
   color: #ff6600;
-  background-color: black;
   transform: scale(1.05);
   text-decoration: none;
 }
@@ -633,4 +630,9 @@ footer {
 .row-cols-md-3>* {
   flex: 1;
   margin: 10px;
+}
+
+.img-logo {
+  width: 5%;
+  height: auto;
 }
